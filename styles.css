@@ -1,0 +1,370 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Start of my CSS edits */
+html {
+    background-color: #000000;
+}
+body {
+    background-color: #FFFFFF;
+    min-width: 485px;
+    max-width: 880px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+p {
+    font-size: 1.25em;
+    margin: 10px;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+}
+header {
+    position: relative;
+    top: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+nav {
+    padding-bottom: 10px;
+}
+ul {
+    display: flex;
+    font-weight: bold;
+}
+nav li {
+    display: inline-flex;
+}
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+nav a:hover {
+    color: #007D7B;
+}
+[href="#top"] {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px;
+    border: #FFFFFF;
+    background-color: #000000;
+    border-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    position: relative;
+    top: 0px;
+}
+h1 {
+    color: #007D7B;
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 3em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+main h2 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 10px;
+}
+#gallery div {
+    display: grid;
+    margin: 5px;
+}
+#gallery img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+figure {
+    display: block; 
+    position: relative; 
+    overflow: hidden; 
+    margin: 0 auto;
+}
+figcaption {
+    position: absolute; 
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+}
+.imgcaption {
+    text-align: center;
+    color: #000000;
+    top: 10px;
+    right: 140px;
+    padding: 10px;
+}
+#contact {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+#contact p {
+    text-align: center;
+}
+#contact > p:nth-child(3) {
+    visibility: hidden;
+}
+form {
+    padding: 10px 60px;
+    margin: 0 auto;
+}
+label {
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+input {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 10px 0 5px;
+    margin-bottom: 30px;
+}
+input::placeholder {
+    color: #007D7B;
+}
+#submit {
+    display: flex;
+    background-color: #007D7B;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 10px 10px 170px;
+    width: 210px;
+    margin: 0 auto;
+}
+#submit a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#submit:hover {
+    background-color: #007D7B;
+}
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    position: relative;
+    min-width: 485px;
+    max-width: 880px;
+    text-align: center;
+    padding: 20px 0 40px 0;
+    z-index: 0;
+}
+small {
+    text-transform: uppercase;
+}
+
+/* INDIVIDUAL FIGCAPTION STYLES */
+.chile {
+    color: #FFFFFF;
+    top: 240px;
+}
+.guatemala {
+    color: #FFFFFF;
+    top: 10px;
+    right: 120px;
+}
+.hawaii {
+    color: #FFFFFF;
+    top: 240px;
+}
+.iran {
+    color: #000000;
+    top: 10px;
+    right: 150px;
+}
+.ireland {
+    color: #000000;
+    top: 10px;
+}
+.italy {
+    color: #000000;
+    top: 590px;
+    right: 160px;
+}
+.moab {
+    color: #FFFFFF;
+    top: 240px;
+    right: 120px;
+}
+.rocky {
+    color: #000000;
+    top: 10px;
+    right: 100px;
+}
+.switzerland {
+    color: #000000;
+    top: 10px;
+    right: 120px;
+}
+.uk {
+    color: #000000;
+    top: 10px;
+    right: 170px;
+}
+.usa {
+    color: #000000;
+    top: 10px;
+    right: 170px;
+}
+.wyoming {
+    color: #FFFFFF;
+    top: 10px;
+}
+
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 485PX */
+ @media screen and (min-width: 485px) {
+    body, header, nav, main, footer {
+        width: 485px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: center;
+        flex-shrink: 0;
+        flex-basis: 130px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 50px;
+    }
+    main {
+        min-width: 485px;
+    }
+    #gallery div {
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+    }
+    input {
+        width: 360px;
+    }
+}
+  
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 880PX */
+@media screen and (min-width: 880px) {
+    body, nav, header, main, footer {
+        width: 880px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: center;
+        flex-shrink: 0;
+        flex-basis: 230px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 100px;
+    }
+    main {
+        min-width: 880px;
+    }
+    #gallery div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+    input {
+        width: 750px;
+    }
+}
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 1300PX */
+@media screen and (min-width: 1300px) {
+    body, nav, header, main, footer {
+        width: 880px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: right;
+        flex-shrink: 0;
+        flex-basis: 250px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 100px;
+    }
+    main {
+        max-width: 880px;
+    }
+    #gallery div {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    .chile {
+        top: 160px;
+        right: 100px;
+    }
+    .guatemala {
+        top: 10px;
+        right: 70px;
+    }
+    .hawaii {
+        top: 160px;
+        right: 90px;
+    }
+    .iran {
+        top: 10px;
+        right: 100px;
+    }
+    .ireland {
+        top: 10px;
+        right: 80px;
+    }
+    .italy {
+        top: 400px;
+        right: 90px;
+    }
+    .moab {
+        top: 160px;
+        right: 60px;
+    }
+    .rocky {
+        top: 10px;
+        right: 40px;
+    }
+    .switzerland {
+        top: 10px;
+        right: 60px;
+    }
+    .uk {
+        top: 10px;
+        right: 110px;
+    }
+    .usa {
+        top: 10px;
+        right: 100px;
+    }
+    .wyoming {
+        top: 10px;
+        right: 70px;
+    }
+    input {
+        width: 750px;
+    }
+}
